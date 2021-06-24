@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GK7322　大畠 愛　レポート課題【３】（８）</title>
+  <style>
+      .pic_frame {
+       display: inline-block;
+       text-align: center; 
+       font-size: 11px;
+     }
+
+     img {
+        width: 13vw;
+        height: auto;
+     }   
+      
+  </style>
+  <script>
+  var name; //変数nameを宣言
+ 
+  //サイズを確認するための犬種ごとの関数
+　function golden() {
+        name="ゴールデン・レトリバー"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は大型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function　sheepdog() {
+        name="シェットランド・シープドッグ"; //変数nameに犬種名を代入
+　　　　 document.getElementById("answerSize").innerHTML=name+"は中型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function shibainu() {
+        name="柴犬"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は小型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function shepherd() {
+        name="ジャーマン・シェパード"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は大型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function dachshund() {
+        name="ダックスフンド"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は小型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function chihuahua() {
+        name="チワワ"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は小型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function spitz() {
+        name="スピッツ"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は中型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function papillon() {
+        name="パピヨン"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は小型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function beagle() {
+        name="ビーグル"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は小型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function bulldog() {
+        name="ブルドッグ"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は大型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function toypoodle() {
+        name="トイプードル"; //変数nameに犬種名を代入
+       document.getElementById("answerSize").innerHTML=name+"は小型犬です。"; //文章をHTMLのテキストに代入
+  }
+  function pomeranian() {
+        name="ポメラニアン"; //変数nameに犬種名を代入
+        document.getElementById("answerSize").innerHTML=name+"は小型犬です。"; //文章をHTMLのテキストに代入
+  }
+
+  //人間の年齢に換算
+  var dogAge; //変数dogAgeを宣言
+  var humanAge; //変数humanAgeを宣言
+
+  function humanAgeFunction() {
+      dogAge=document.getElementById("dogAge").value; //dogAgeの数値を取得
+
+      if(name=="ゴールデン・レトリバー"||name=="ジャーマン・シェパード"||name=="ブルドッグ") {
+          　　if(dogAge<1001) {
+                    humanAge=12+(dogAge-1)*7; //人間だった場合の年齢を計算
+                    answerAge="人間の年齢では"+humanAge+"歳です。"; //完成形の文章をanswerAgeに代入
+              } else {
+                    answerAge="正しい数字を入力してください。"; //数字以外または1001以上の数字が入力された場合のテキストを表示
+              }
+      } else {
+          　　if(dogAge<1001) {
+                    humanAge=24+(dogAge-2)*4; //人間だった場合の年齢を計算
+                    answerAge="人間の年齢では"+humanAge+"歳です。"; //完成形の文章をanswerAgeに代入
+              } else {
+                    answerAge="正しい数字を入力してください。"; //数字以外または1001以上の数字が入力された場合のテキストを表示
+              }     
+      } 
+      document.getElementById("answerAge").innerHTML=answerAge; //answerAgeの数値をHTMLのテキストに代入
+  }
+  </script>
+</head>
+<body>
+  <h1>犬の年齢を人間に換算</h1>
+  <p>調べたい犬種の画像をクリックしてください。</p>
+　<div class="pic_frame">
+     <img src="DOG_golden_retriever.png" onclick="golden()">
+     <p>ゴールデン・レトリバー</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_shetland_sheepdog.png" onclick="sheepdog()">
+     <p>シェットランド・シープドッグ</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_shibainu.png" onclick="shibainu()">
+     <p>柴犬</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_german_shepherd.png" onclick="shepherd()">
+     <p>ジャーマン・シェパード</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_dachshund.png" onclick="dachshund()">
+     <p>ダックスフンド</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_chihuahua.png" onclick="chihuahua()">
+     <p>チワワ</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_spitz.png" onclick="spitz()">
+     <p>スピッツ</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_papillon.png" onclick="papillon()">
+     <p>パピヨン</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_beagle.png" onclick="beagle()">
+     <p>ビーグル</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_bulldog.png" onclick="bulldog()">
+     <p>ブルドッグ</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_toypoodle.png" onclick="toypoodle()">
+     <p>トイプードル</p>
+  </div>
+  <div class="pic_frame">
+     <img src="DOG_pomeranian.png" onclick="pomeranian()">
+     <p>ポメラニアン</p>
+  </div>
+  <div id="answerSize">ここに犬のサイズが表示されます。</div>
+  <br><br>
+  <p>
+  <form name="myform">
+     犬の年齢（半角で1~1000歳）：<input id="dogAge" type="text">歳
+     <input type="button" value="人間の年齢に換算" onclick="humanAgeFunction()">
+  </form>
+  </p>
+　<div id="answerAge">ここに人間換算した年齢が表示されます。</div>
+　<br><br>
+</body>
